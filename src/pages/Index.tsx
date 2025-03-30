@@ -7,8 +7,10 @@ import Footer from '@/components/Footer';
 import StoryCard from '@/components/StoryCard';
 import { featuredStories } from '@/data/stories';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -25,12 +27,12 @@ const Index = () => {
                 Discover how individuals and communities are creating positive change around the world through resilience and determination.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90"  onClick={() => navigate("/stories")}>
                   Explore Stories
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                {/* <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white/10">
                   Get Involved
-                </Button>
+                </Button> */}
               </div>
             </div>
             <div className="relative">
@@ -62,29 +64,37 @@ const Index = () => {
       </section>
 
       {/* Impact Stats */}
-      <section className="bg-gray-50 py-16">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Global Impact</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-card text-center">
-              <p className="text-4xl font-bold text-primary mb-2">2,500+</p>
-              <p className="text-lg font-medium">Success Stories</p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-card text-center">
-              <p className="text-4xl font-bold text-primary mb-2">120</p>
-              <p className="text-lg font-medium">Countries</p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-card text-center">
-              <p className="text-4xl font-bold text-primary mb-2">$15M</p>
-              <p className="text-lg font-medium">In Donations</p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-card text-center">
-              <p className="text-4xl font-bold text-primary mb-2">1.2M</p>
-              <p className="text-lg font-medium">Lives Impacted</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="bg-gray-50 py-16 flex justify-center">
+  <div className="container text-center">
+    <h2 className="text-3xl font-bold mb-12">Our Impact</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-card">
+        <p className="text-4xl font-bold text-primary mb-2">2,500+</p>
+        <p className="text-lg font-medium">Success Stories</p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-card">
+        <p className="text-4xl font-bold text-primary mb-2">24</p>
+        <p className="text-lg font-medium">Districts</p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-card">
+        <p className="text-4xl font-bold text-primary mb-2">110</p>
+        <p className="text-lg font-medium">Taluka</p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-card">
+        <p className="text-4xl font-bold text-primary mb-2">1093</p>
+        <p className="text-lg font-medium">Villages</p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-card">
+        <p className="text-4xl font-bold text-primary mb-2">$15M</p>
+        <p className="text-lg font-medium">In Donations</p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-card">
+        <p className="text-4xl font-bold text-primary mb-2">1.2M</p>
+        <p className="text-lg font-medium">Lives Impacted</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Categories Section */}
       <section className="py-16">

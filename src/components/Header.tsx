@@ -35,7 +35,7 @@ const Header = () => {
             </div>
             <Link to="/about" className="nav-link">About Us</Link>
             <Link to="/impact" className="nav-link">Our Impact</Link>
-            <Link to="/get-involved" className="nav-link">Get Involved</Link>
+            {/* <Link to="/get-involved" className="nav-link">Get Involved</Link> */}
           </nav>
 
           {/* Desktop Actions */}
@@ -64,7 +64,7 @@ const Header = () => {
               <Link to="/stories" className="nav-link py-2" onClick={toggleMenu}>Our Stories</Link>
               <Link to="/about" className="nav-link py-2" onClick={toggleMenu}>About Us</Link>
               <Link to="/impact" className="nav-link py-2" onClick={toggleMenu}>Our Impact</Link>
-              <Link to="/get-involved" className="nav-link py-2" onClick={toggleMenu}>Get Involved</Link>
+              {/* <Link to="/get-involved" className="nav-link py-2" onClick={toggleMenu}>Get Involved</Link> */}
               <div className="flex flex-col space-y-2 pt-2 border-t">
                 <Button variant="outline" className="w-full justify-center">Log In</Button>
                 <Button className="w-full justify-center">Donate</Button>

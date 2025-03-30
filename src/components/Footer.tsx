@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Integrity Foundation</h3>
             <p className="text-sm text-gray-600 mb-4">
-              Integrity Foundation is dedicated to showcasing stories of success, inspiration, 
+              Integrity Foundation is dedicated to showcasing stories of success, inspiration,
               and positive change from around the world.
             </p>
             <div className="flex space-x-4">
@@ -38,7 +38,7 @@ const Footer = () => {
               <li><Link to="/about" className="footer-link">About Us</Link></li>
               <li><Link to="/stories" className="footer-link">Success Stories</Link></li>
               <li><Link to="/impact" className="footer-link">Our Impact</Link></li>
-              <li><Link to="/press" className="footer-link">Press</Link></li>
+              {/* <li><Link to="/press" className="footer-link">Press</Link></li> */}
               <li><Link to="/careers" className="footer-link">Careers</Link></li>
             </ul>
           </div>
@@ -67,9 +67,10 @@ const Footer = () => {
               </li>
               <li className="text-gray-600 text-sm mt-4">
                 Integrity Foundation<br />
-                123 Integrity Street<br />
-                San Francisco, CA 94111
+                HPCL Housing Colony, N 2, Cidco<br />
+                Chhatrapati Sambhaji Nagar, Maharashtra 431007
               </li>
+
             </ul>
           </div>
         </div>
