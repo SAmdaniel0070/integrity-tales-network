@@ -24,7 +24,7 @@ import {
   Legend,
   Tooltip
 } from 'recharts';
-import { Award, BookOpen, CircleDollarSign, Users } from 'lucide-react';
+import { Award, BookOpen, CircleDollarSign, Users, MapPin, Church } from 'lucide-react';
 
 const Impact = () => {
   // Sample data for charts and metrics
@@ -56,6 +56,12 @@ const Impact = () => {
     { name: 'Business Ownership', value: 40 },
     { name: 'Education Access', value: 15 },
     { name: 'Healthcare Access', value: 10 }
+  ];
+
+  // New data for operational statistics
+  const operationalData = [
+    { name: 'Cities', count: 47 },
+    { name: 'Churches', count: 135 }
   ];
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -180,28 +186,27 @@ const Impact = () => {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Women's Empowerment Distribution</CardTitle>
+                    <CardTitle>Operational Reach in India</CardTitle>
                   </CardHeader>
                   <CardContent className="h-80">
-                    <ChartContainer config={{}} className="h-full">
-                      <PieChart>
-                        <Pie
-                          data={empowermentData}
-                          cx="50%"
-                          cy="50%"
-                          labelLine={false}
-                          outerRadius={80}
-                          fill="#8884d8"
-                          dataKey="value"
-                          label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                        >
-                          {empowermentData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                          ))}
-                        </Pie>
-                        <ChartTooltip content={<ChartTooltipContent />} />
-                      </PieChart>
-                    </ChartContainer>
+                    <div className="grid grid-cols-2 gap-4 h-full">
+                      {operationalData.map((item) => (
+                        <div key={item.name} className="flex flex-col items-center justify-center text-center p-4 border border-border/30 rounded-lg h-full">
+                          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                            {item.name === 'Cities' ? (
+                              <MapPin className="h-8 w-8 text-primary" />
+                            ) : (
+                              <Church className="h-8 w-8 text-primary" />
+                            )}
+                          </div>
+                          <div className="text-4xl font-bold text-primary mb-2">{item.count}</div>
+                          <h3 className="font-medium">{item.name}</h3>
+                          <p className="text-sm text-muted-foreground mt-2">
+                            {item.name === 'Cities' ? 'Communities served across India' : 'Churches reached through our programs'}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               </div>
