@@ -21,7 +21,6 @@ import {
   Cell,
   LineChart,
   Line,
-  ResponsiveContainer,
   Legend,
   Tooltip
 } from 'recharts';
@@ -237,20 +236,23 @@ const Impact = () => {
                 </Card>
               </div>
 
-              <Card>
+              <Card className="mt-8">
                 <CardHeader>
                   <CardTitle>Savings Groups Growth</CardTitle>
                 </CardHeader>
-                <CardContent className="h-80">
-                  <ChartContainer config={{}}>
-                    <BarChart data={savingsData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <ChartTooltip content={<ChartTooltipContent />} />
-                      <Bar dataKey="value" name="Number of Groups" fill="#00C49F" />
-                    </BarChart>
-                  </ChartContainer>
+                <CardContent className="pt-6 px-6">
+                  <div className="h-[400px] w-full">
+                    <ChartContainer config={{}}>
+                      <BarChart data={savingsData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis dataKey="name" axisLine={false} tickLine={false} />
+                        <YAxis axisLine={false} tickLine={false} />
+                        <ChartTooltip content={<ChartTooltipContent />} />
+                        <Legend wrapperStyle={{ paddingTop: 20 }} />
+                        <Bar dataKey="value" name="Number of Groups" fill="#00C49F" radius={[4, 4, 0, 0]} />
+                      </BarChart>
+                    </ChartContainer>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -286,20 +288,23 @@ const Impact = () => {
                 </Card>
               </div>
 
-              <Card>
+              <Card className="mt-8">
                 <CardHeader>
                   <CardTitle>Education Distribution</CardTitle>
                 </CardHeader>
-                <CardContent className="h-80">
-                  <ChartContainer config={{}}>
-                    <BarChart data={educationData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <ChartTooltip content={<ChartTooltipContent />} />
-                      <Bar dataKey="students" name="Number of Students" fill="#0088FE" />
-                    </BarChart>
-                  </ChartContainer>
+                <CardContent className="pt-6 px-6">
+                  <div className="h-[400px] w-full">
+                    <ChartContainer config={{}}>
+                      <BarChart data={educationData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis dataKey="name" axisLine={false} tickLine={false} />
+                        <YAxis axisLine={false} tickLine={false} />
+                        <ChartTooltip content={<ChartTooltipContent />} />
+                        <Legend wrapperStyle={{ paddingTop: 20 }} />
+                        <Bar dataKey="students" name="Number of Students" fill="#0088FE" radius={[4, 4, 0, 0]} />
+                      </BarChart>
+                    </ChartContainer>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -335,20 +340,31 @@ const Impact = () => {
                 </Card>
               </div>
 
-              <Card>
+              <Card className="mt-8">
                 <CardHeader>
                   <CardTitle>Monthly Income Trends</CardTitle>
                 </CardHeader>
-                <CardContent className="h-80">
-                  <ChartContainer config={{}}>
-                    <LineChart data={incomeData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="month" />
-                      <YAxis />
-                      <ChartTooltip content={<ChartTooltipContent />} />
-                      <Line type="monotone" dataKey="income" stroke="#FFBB28" name="Average Monthly Income ($)" />
-                    </LineChart>
-                  </ChartContainer>
+                <CardContent className="pt-6 px-6">
+                  <div className="h-[400px] w-full">
+                    <ChartContainer config={{}}>
+                      <LineChart data={incomeData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                        <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
+                        <XAxis dataKey="month" axisLine={false} tickLine={false} />
+                        <YAxis axisLine={false} tickLine={false} />
+                        <ChartTooltip content={<ChartTooltipContent />} />
+                        <Legend wrapperStyle={{ paddingTop: 20 }} />
+                        <Line 
+                          type="monotone" 
+                          dataKey="income" 
+                          stroke="#FFBB28" 
+                          strokeWidth={2}
+                          name="Average Monthly Income ($)"
+                          dot={{ stroke: '#FFBB28', strokeWidth: 2, r: 4, fill: '#fff' }}
+                          activeDot={{ r: 6, stroke: '#FFBB28', strokeWidth: 2, fill: '#fff' }}
+                        />
+                      </LineChart>
+                    </ChartContainer>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -361,26 +377,28 @@ const Impact = () => {
                 <CardHeader>
                   <CardTitle>Empowerment Distribution</CardTitle>
                 </CardHeader>
-                <CardContent className="h-80">
-                  <ChartContainer config={{}}>
-                    <PieChart>
-                      <Pie
-                        data={empowermentData}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="value"
-                        label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                      >
-                        {empowermentData.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                      </Pie>
-                      <ChartTooltip content={<ChartTooltipContent />} />
-                    </PieChart>
-                  </ChartContainer>
+                <CardContent className="pt-6">
+                  <div className="h-[350px]">
+                    <ChartContainer config={{}}>
+                      <PieChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+                        <Pie
+                          data={empowermentData}
+                          cx="50%"
+                          cy="50%"
+                          labelLine={true}
+                          outerRadius={120}
+                          fill="#8884d8"
+                          dataKey="value"
+                          label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                        >
+                          {empowermentData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                          ))}
+                        </Pie>
+                        <ChartTooltip content={<ChartTooltipContent />} />
+                      </PieChart>
+                    </ChartContainer>
+                  </div>
                 </CardContent>
               </Card>
               <div className="space-y-6">
