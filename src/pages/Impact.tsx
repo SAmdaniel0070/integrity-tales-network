@@ -79,11 +79,12 @@ const Impact = () => {
 
         <section className="container py-12">
           <Tabs defaultValue="overview" className="w-full">
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <TabsList className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
               <TabsTrigger value="overview" className="data-[state=active]:bg-primary data-[state=active]:text-white">Overview</TabsTrigger>
               <TabsTrigger value="savings" className="data-[state=active]:bg-primary data-[state=active]:text-white">Savings Groups</TabsTrigger>
               <TabsTrigger value="education" className="data-[state=active]:bg-primary data-[state=active]:text-white">Education</TabsTrigger>
               <TabsTrigger value="income" className="data-[state=active]:bg-primary data-[state=active]:text-white">Income Generation</TabsTrigger>
+              <TabsTrigger value="empowerment" className="data-[state=active]:bg-primary data-[state=active]:text-white">Women Empowerment</TabsTrigger>
             </TabsList>
             
             {/* Overview Tab Content */}
@@ -372,17 +373,46 @@ const Impact = () => {
                 </CardContent>
               </Card>
             </TabsContent>
-          </Tabs>
 
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold mb-8 text-center">Women's Empowerment Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Empowerment Distribution</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="h-[350px]">
+            {/* Women's Empowerment Tab Content */}
+            <TabsContent value="empowerment" className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                      <CardTitle className="text-sm font-medium">Women in Leadership</CardTitle>
+                      <Award className="h-5 w-5 text-primary" />
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold">2,970</div>
+                      <p className="text-sm text-muted-foreground">Community leaders trained</p>
+                      <div className="mt-4">
+                        <Progress value={75} />
+                        <p className="text-xs text-right mt-1">75% of target</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                      <CardTitle className="text-sm font-medium">Women-Owned Businesses</CardTitle>
+                      <CircleDollarSign className="h-5 w-5 text-primary" />
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold">3,400</div>
+                      <p className="text-sm text-muted-foreground">Businesses started or expanded</p>
+                      <div className="mt-4">
+                        <Progress value={85} />
+                        <p className="text-xs text-right mt-1">85% of target</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Empowerment Distribution</CardTitle>
+                  </CardHeader>
+                  <CardContent className="h-[400px]">
                     <ChartContainer config={{}} className="h-full">
                       <PieChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                         <Pie
@@ -402,41 +432,42 @@ const Impact = () => {
                         <ChartTooltip content={<ChartTooltipContent />} />
                       </PieChart>
                     </ChartContainer>
-                  </div>
-                </CardContent>
-              </Card>
-              <div className="space-y-6">
-                <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Women in Leadership</CardTitle>
-                    <Award className="h-5 w-5 text-primary" />
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold">2,970</div>
-                    <p className="text-sm text-muted-foreground">Community leaders trained</p>
-                    <div className="mt-4">
-                      <Progress value={75} />
-                      <p className="text-xs text-right mt-1">75% of target</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Women-Owned Businesses</CardTitle>
-                    <CircleDollarSign className="h-5 w-5 text-primary" />
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold">3,400</div>
-                    <p className="text-sm text-muted-foreground">Businesses started or expanded</p>
-                    <div className="mt-4">
-                      <Progress value={85} />
-                      <p className="text-xs text-right mt-1">85% of target</p>
-                    </div>
                   </CardContent>
                 </Card>
               </div>
-            </div>
-          </div>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle>Women's Empowerment Initiatives</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6 px-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="flex flex-col items-center text-center p-4 border border-border/30 rounded-lg">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <Award className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="font-medium mb-1">Leadership Training</h3>
+                      <p className="text-sm text-muted-foreground">Equipping 3,000+ women with leadership skills</p>
+                    </div>
+                    <div className="flex flex-col items-center text-center p-4 border border-border/30 rounded-lg">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <CircleDollarSign className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="font-medium mb-1">Business Grants</h3>
+                      <p className="text-sm text-muted-foreground">$2.1M distributed to women entrepreneurs</p>
+                    </div>
+                    <div className="flex flex-col items-center text-center p-4 border border-border/30 rounded-lg">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                        <BookOpen className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="font-medium mb-1">Educational Scholarships</h3>
+                      <p className="text-sm text-muted-foreground">1,500 scholarships provided for girls and women</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
         </section>
       </main>
       
