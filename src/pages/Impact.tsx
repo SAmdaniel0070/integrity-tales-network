@@ -86,6 +86,7 @@ const Impact = () => {
               <TabsTrigger value="income" className="data-[state=active]:bg-primary data-[state=active]:text-white">Income Generation</TabsTrigger>
             </TabsList>
             
+            {/* Overview Tab Content */}
             <TabsContent value="overview" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Card>
@@ -164,7 +165,7 @@ const Impact = () => {
                     <CardTitle>Impact Growth Trends</CardTitle>
                   </CardHeader>
                   <CardContent className="h-80">
-                    <ChartContainer config={{}}>
+                    <ChartContainer config={{}} className="h-full">
                       <LineChart data={savingsData}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
@@ -181,7 +182,7 @@ const Impact = () => {
                     <CardTitle>Women's Empowerment Distribution</CardTitle>
                   </CardHeader>
                   <CardContent className="h-80">
-                    <ChartContainer config={{}}>
+                    <ChartContainer config={{}} className="h-full">
                       <PieChart>
                         <Pie
                           data={empowermentData}
@@ -205,6 +206,7 @@ const Impact = () => {
               </div>
             </TabsContent>
 
+            {/* Savings Groups Tab Content */}
             <TabsContent value="savings" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card>
@@ -242,7 +244,7 @@ const Impact = () => {
                 </CardHeader>
                 <CardContent className="pt-6 px-6">
                   <div className="h-[400px] w-full">
-                    <ChartContainer config={{}}>
+                    <ChartContainer config={{}} className="h-full w-full">
                       <BarChart data={savingsData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} />
                         <XAxis dataKey="name" axisLine={false} tickLine={false} />
@@ -257,6 +259,7 @@ const Impact = () => {
               </Card>
             </TabsContent>
 
+            {/* Education Tab Content */}
             <TabsContent value="education" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card>
@@ -294,7 +297,7 @@ const Impact = () => {
                 </CardHeader>
                 <CardContent className="pt-6 px-6">
                   <div className="h-[400px] w-full">
-                    <ChartContainer config={{}}>
+                    <ChartContainer config={{}} className="h-full w-full">
                       <BarChart data={educationData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} />
                         <XAxis dataKey="name" axisLine={false} tickLine={false} />
@@ -309,6 +312,7 @@ const Impact = () => {
               </Card>
             </TabsContent>
 
+            {/* Income Generation Tab Content */}
             <TabsContent value="income" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card>
@@ -346,7 +350,7 @@ const Impact = () => {
                 </CardHeader>
                 <CardContent className="pt-6 px-6">
                   <div className="h-[400px] w-full">
-                    <ChartContainer config={{}}>
+                    <ChartContainer config={{}} className="h-full w-full">
                       <LineChart data={incomeData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
                         <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
                         <XAxis dataKey="month" axisLine={false} tickLine={false} />
@@ -379,7 +383,7 @@ const Impact = () => {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="h-[350px]">
-                    <ChartContainer config={{}}>
+                    <ChartContainer config={{}} className="h-full">
                       <PieChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                         <Pie
                           data={empowermentData}
