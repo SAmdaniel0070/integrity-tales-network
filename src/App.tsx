@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Stories from "./pages/Stories";
 import StoryDetail from "./pages/StoryDetail";
 import Impact from "./pages/Impact";
+import Education from "./pages/Education";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/stories/:category" element={<Stories />} />
           <Route path="/story/:slug" element={<StoryDetail />} />
           <Route path="/impact" element={<Impact />} />
+          <Route path="/education" element={<Education />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
