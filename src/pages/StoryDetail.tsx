@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getStory, stories } from '@/data/stories';
+import { getStory, allStories } from '@/data/stories';
 import { ChevronRight, MapPin, Calendar, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -28,8 +28,8 @@ const StoryDetail = () => {
     );
   }
 
-  // Get 3 related stories, excluding the current one
-  const relatedStories = stories
+  // Get 3 related stories from the same category, excluding the current one
+  const relatedStories = allStories
     .filter(s => s.id !== story.id)
     .filter(s => s.category === story.category)
     .slice(0, 3);
@@ -66,7 +66,7 @@ const StoryDetail = () => {
               </div>
               <div className="flex items-center">
                 <Calendar size={16} className="mr-1" />
-                <span>June 12, 2023</span>
+                <span>April 8, 2025</span>
               </div>
             </div>
           </div>
@@ -105,64 +105,71 @@ const StoryDetail = () => {
             {story.excerpt}
           </p>
           
-          {/* This would be dynamic content in a real app */}
-          <div className="prose prose-lg max-w-none">
-            <p>
-              In the heart of {story.location}, a remarkable transformation was taking place. What started as a small 
-              initiative by local community members soon grew into something that would change hundreds of lives.
-            </p>
-            
-            <p>
-              "We never imagined the impact would be so significant," says Maria, one of the project leaders. "We simply 
-              saw a need and decided to take action."
-            </p>
-            
-            <h2>The Challenge</h2>
-            <p>
-              For decades, the community had struggled with limited access to resources, which created numerous obstacles 
-              for residents. Children had to walk miles to attend schools that were often overcrowded and under-resourced. 
-              Healthcare was scarce, and economic opportunities were limited.
-            </p>
-            
-            <p>
-              "The biggest challenge was convincing people that change was possible," explains Robert, another community leader. 
-              "After years of setbacks, many had lost hope."
-            </p>
-            
-            <h2>The Solution</h2>
-            <p>
-              The initiative began with a comprehensive assessment of the community's needs and assets. Rather than 
-              imposing external solutions, the team worked closely with local residents to develop sustainable approaches 
-              that respected cultural values and utilized local resources.
-            </p>
-            
-            <p>
-              They established training programs that equipped residents with valuable skills, created partnerships with 
-              regional organizations, and implemented innovative funding mechanisms to ensure long-term sustainability.
-            </p>
-            
-            <h2>The Impact</h2>
-            <p>
-              Today, the community tells a very different story. School attendance has increased by 75%, healthcare 
-              access has improved significantly, and new economic opportunities have reduced unemployment by 40%.
-            </p>
-            
-            <p>
-              "The most important change is in how people see themselves," says Maria. "There's a sense of empowerment 
-              and ownership that wasn't there before. People believe in their ability to create change."
-            </p>
-            
-            <h2>Looking Forward</h2>
-            <p>
-              The success of this initiative has inspired similar efforts in neighboring communities. The team is now 
-              focusing on creating a network that allows these communities to share resources and lessons learned.
-            </p>
-            
-            <p>
-              "This is just the beginning," Robert says with confidence. "We've shown what's possible when communities 
-              come together with purpose and determination. The future is bright."
-            </p>
-          </div>
+          {/* Story full content */}
+          {story.fullStory ? (
+            <div 
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: story.fullStory }}
+            />
+          ) : (
+            <div className="prose prose-lg max-w-none">
+              <p>
+                In the heart of {story.location}, a remarkable transformation was taking place. What started as a small 
+                initiative by local community members soon grew into something that would change hundreds of lives.
+              </p>
+              
+              <p>
+                "We never imagined the impact would be so significant," says Maria, one of the project leaders. "We simply 
+                saw a need and decided to take action."
+              </p>
+              
+              <h2>The Challenge</h2>
+              <p>
+                For decades, the community had struggled with limited access to resources, which created numerous obstacles 
+                for residents. Children had to walk miles to attend schools that were often overcrowded and under-resourced. 
+                Healthcare was scarce, and economic opportunities were limited.
+              </p>
+              
+              <p>
+                "The biggest challenge was convincing people that change was possible," explains Robert, another community leader. 
+                "After years of setbacks, many had lost hope."
+              </p>
+              
+              <h2>The Solution</h2>
+              <p>
+                The initiative began with a comprehensive assessment of the community's needs and assets. Rather than 
+                imposing external solutions, the team worked closely with local residents to develop sustainable approaches 
+                that respected cultural values and utilized local resources.
+              </p>
+              
+              <p>
+                They established training programs that equipped residents with valuable skills, created partnerships with 
+                regional organizations, and implemented innovative funding mechanisms to ensure long-term sustainability.
+              </p>
+              
+              <h2>The Impact</h2>
+              <p>
+                Today, the community tells a very different story. School attendance has increased by 75%, healthcare 
+                access has improved significantly, and new economic opportunities have reduced unemployment by 40%.
+              </p>
+              
+              <p>
+                "The most important change is in how people see themselves," says Maria. "There's a sense of empowerment 
+                and ownership that wasn't there before. People believe in their ability to create change."
+              </p>
+              
+              <h2>Looking Forward</h2>
+              <p>
+                The success of this initiative has inspired similar efforts in neighboring communities. The team is now 
+                focusing on creating a network that allows these communities to share resources and lessons learned.
+              </p>
+              
+              <p>
+                "This is just the beginning," Robert says with confidence. "We've shown what's possible when communities 
+                come together with purpose and determination. The future is bright."
+              </p>
+            </div>
+          )}
 
           <div className="border-t border-b py-6 my-8">
             <h3 className="font-bold text-lg mb-3">How You Can Help</h3>

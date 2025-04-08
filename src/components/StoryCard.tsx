@@ -11,6 +11,7 @@ export interface Story {
   location: string;
   imageUrl: string;
   slug: string;
+  fullStory?: string;
 }
 
 interface StoryCardProps {
