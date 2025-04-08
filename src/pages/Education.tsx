@@ -133,18 +133,18 @@ const Education = () => {
           </div>
         </section>
 
-        {/* Success Stories Section */}
+        {/* Success Stories Section - Updated to show all education stories */}
         <section className="py-16 bg-gray-50">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Education Success Stories</h2>
               <p className="text-gray-600">
                 Every day, we witness the transformative power of education in the communities we serve. 
-                These stories highlight the impact of our educational initiatives.
+                Here are inspiring stories that highlight the impact of our educational initiatives.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
               {educationStories.length > 0 ? (
                 educationStories.map((story) => (
                   <StoryCard key={story.id} story={story} />
