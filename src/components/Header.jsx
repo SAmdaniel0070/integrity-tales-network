@@ -29,7 +29,7 @@ const Header = () => {
               <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-64 mt-2">
                 <Link to="/stories" className="block py-2 hover:text-primary">All Stories</Link>
                 <Link to="/stories/education" className="block py-2 hover:text-primary">Education</Link>
-                <Link to="/stories/healthcare" className="block py-2 hover:text-primary">Healthcare</Link>
+                <Link to="/stories/empowerment" className="block py-2 hover:text-primary">Empowerment</Link>
                 <Link to="/stories/community" className="block py-2 hover:text-primary">Community</Link>
               </div>
             </div>
@@ -47,7 +47,6 @@ const Header = () => {
             <Button variant="outline" size="sm" className="rounded-full">
               Log In <User size={16} className="ml-2" />
             </Button>
-            <Button size="sm" className="rounded-full">Donate</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,7 +68,6 @@ const Header = () => {
               {/* <Link to="/get-involved" className="nav-link py-2" onClick={toggleMenu}>Get Involved</Link> */}
               <div className="flex flex-col space-y-2 pt-2 border-t">
                 <Button variant="outline" className="w-full justify-center">Log In</Button>
-                <Button className="w-full justify-center">Donate</Button>
               </div>
             </div>
           </div>

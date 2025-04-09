@@ -226,16 +226,16 @@ const Index = () => {
                 </div>
               </div>
             </Link>
-            <Link to="/stories/healthcare" className="group relative rounded-lg overflow-hidden aspect-[3/2]">
+            <Link to="/stories/empowerment" className="group relative rounded-lg overflow-hidden aspect-[3/2]">
               <img 
                 src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Healthcare" 
+                alt="Empowerment" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-6">
-                  <h3 className="text-white text-2xl font-bold mb-2">Healthcare</h3>
-                  <p className="text-white/80">Building healthier communities</p>
+                  <h3 className="text-white text-2xl font-bold mb-2">Empowerment</h3>
+                  <p className="text-white/80">Building stronger individuals</p>
                 </div>
               </div>
             </Link>

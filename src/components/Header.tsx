@@ -29,7 +29,7 @@ const Header = () => {
               <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-64 mt-2">
                 <Link to="/stories" className="block py-2 hover:text-primary">All Stories</Link>
                 <Link to="/stories/education" className="block py-2 hover:text-primary">Education</Link>
-                <Link to="/stories/healthcare" className="block py-2 hover:text-primary">Healthcare</Link>
+                <Link to="/stories/empowerment" className="block py-2 hover:text-primary">Empowerment</Link>
                 <Link to="/stories/community" className="block py-2 hover:text-primary">Community</Link>
               </div>
             </div>
