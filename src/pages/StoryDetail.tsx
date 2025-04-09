@@ -177,9 +177,8 @@ const StoryDetail = () => {
 
           <div className="border-t border-b py-6 my-8 clear-both">
             <h3 className="font-bold text-lg mb-3">How You Can Help</h3>
-            <p className="mb-4">Support more success stories like this by donating or volunteering with Integrity Foundation.</p>
+            <p className="mb-4">Support more success stories like this by volunteering with Integrity Foundation.</p>
             <div className="flex gap-4">
-              <Button>Donate Now</Button>
               <Button variant="outline">Volunteer</Button>
             </div>
           </div>
