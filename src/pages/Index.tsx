@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import StoryCard from '@/components/StoryCard';
-import { featuredStories } from '@/data/stories';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from "react-router-dom";
 
@@ -39,23 +37,6 @@ const Index = () => {
                 className="rounded-lg shadow-lg"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Stories */}
-      <section className="py-16">
-        <div className="container">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold">Featured Success Stories</h2>
-            <Link to="/stories" className="text-primary flex items-center font-medium hover:underline">
-              View all stories <ArrowRight size={18} className="ml-1" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {featuredStories.map((story) => (
-              <StoryCard key={story.id} story={story} />
-            ))}
           </div>
         </div>
       </section>
@@ -284,7 +265,6 @@ const Index = () => {
               Help us continue sharing inspiring stories of impact and change by supporting our work. Together, we can build a world where everyone's success stories matter.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="btn-primary">Donate Now</Button>
               <Button size="lg" variant="outline" className="btn-outline">Become a Volunteer</Button>
             </div>
           </div>
