@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { getStory, allStories } from '@/data/stories';
 import { ChevronRight, MapPin, Calendar, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const StoryDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -87,23 +88,26 @@ const StoryDetail = () => {
         </div>
       </div>
 
-      {/* Hero Image */}
-      <div className="container mb-10">
-        <div className="aspect-[21/9] rounded-xl overflow-hidden">
-          <img 
-            src={story.imageUrl} 
-            alt={story.title} 
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Story Content */}
+      {/* Story Content with Integrated Image */}
       <div className="container pb-16">
         <div className="max-w-3xl mx-auto">
           <p className="text-xl mb-6 font-medium text-gray-700">
             {story.excerpt}
           </p>
+          
+          {/* Float image to the right of the text for better integration */}
+          <div className="mb-6 md:float-right md:ml-6 md:w-2/5 lg:w-1/3 rounded-lg overflow-hidden shadow-md">
+            <AspectRatio ratio={4/3}>
+              <img 
+                src={story.imageUrl} 
+                alt={story.title} 
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+            <div className="bg-gray-50 p-2 text-sm text-center text-gray-600">
+              {story.title} - {story.location}
+            </div>
+          </div>
           
           {/* Story full content */}
           {story.fullStory ? (
@@ -171,7 +175,7 @@ const StoryDetail = () => {
             </div>
           )}
 
-          <div className="border-t border-b py-6 my-8">
+          <div className="border-t border-b py-6 my-8 clear-both">
             <h3 className="font-bold text-lg mb-3">How You Can Help</h3>
             <p className="mb-4">Support more success stories like this by donating or volunteering with Integrity Foundation.</p>
             <div className="flex gap-4">

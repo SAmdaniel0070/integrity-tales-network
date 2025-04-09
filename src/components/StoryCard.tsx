@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio'; 
 
 export interface Story {
   id: string;
@@ -20,13 +21,15 @@ interface StoryCardProps {
 
 const StoryCard = ({ story }: StoryCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <img 
-          src={story.imageUrl} 
-          alt={story.title} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+    <div className="bg-white rounded-lg shadow-md overflow-hidden h-full group transition-all duration-300 hover:shadow-lg">
+      <div className="relative overflow-hidden">
+        <AspectRatio ratio={4/3}>
+          <img 
+            src={story.imageUrl} 
+            alt={story.title} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </AspectRatio>
         <div className="absolute top-3 left-3 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary rounded-full">
           {story.category}
         </div>
