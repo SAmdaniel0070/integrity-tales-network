@@ -51,28 +51,28 @@ export const educationStories: Story[] = [
     `
   },
   {
-    id: "priya",
-    title: "Priya Singh: Finding Her Voice Through Education",
-    excerpt: "Once shy and timid, Priya transformed through ASC's confidence-building workshops. Now leading a women's literacy program in her village, she's helping other girls discover the power of their voices.",
-    category: "Leadership",
+    id: "ansh",
+    title: "Ansh Chabukswar: Journey of Inspiration",
+    excerpt: "This report highlights the remarkable transformation of Ansh, a nursery student from a financially disadvantaged background, who overcame obstacles to receive a quality education through LWA program.",
+    category: "Education",
     location: "Amravati",
-    imageUrl: "https://images.unsplash.com/photo-1560251180-1a0b9a576d31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    slug: "priya-singh-story",
+    imageUrl: "/lovable-uploads/3d6e7c7e-883b-4677-b3d1-ff2632a65584.png",
+    slug: "ansh-chabukswar-story",
     fullStory: `
-      <h2>Silent Beginnings</h2>
-      <p>When Priya Singh first entered ASC's classroom at age 12, she was so quiet that many teachers didn't notice her presence. Growing up in a conservative household where girls were discouraged from speaking up, Priya had internalized the belief that her thoughts and opinions held little value. Despite being academically capable, she would whisper answers or write them down rather than raise her hand, fearing judgment and ridicule.</p>
+      <h2>Humble Beginnings</h2>
+      <p>Ansh Chabukswar comes from a financially disadvantaged background where access to quality education seemed like a distant dream. His parents, despite their limited means, held education in high regard and were determined to provide their son with opportunities they never had.</p>
 
-      <h2>Finding Her Voice</h2>
-      <p>ASC's program included more than academic subjects – it featured workshops specifically designed to build confidence and self-expression. Initially reluctant to participate, Priya was gently encouraged by her mentors to join these sessions. Through carefully structured activities, roleplay exercises, and a supportive environment where mistakes were treated as learning opportunities, Priya gradually began to speak up.</p>
+      <h2>Finding LWA</h2>
+      <p>When Ansh's parents discovered the LWA program offering free education to underprivileged children, they immediately recognized it as a life-changing opportunity for their child. From his first day as a nursery student, Ansh showed remarkable enthusiasm for learning, despite the socioeconomic challenges his family faced.</p>
 
-      <h2>A Turning Point</h2>
-      <p>The pivotal moment came during a school debate competition when Priya, initially terrified, volunteered to replace an ill teammate. Her passionate speech about girls' education rights earned her not only the first prize but a standing ovation. This experience fundamentally changed her perception of herself and her capabilities. "I realized that day that my voice matters – that I have something valuable to contribute," Priya recalls.</p>
+      <h2>Intellectual Growth</h2>
+      <p>The dedicated teachers at LWA quickly recognized Ansh's natural curiosity and eagerness to learn. Through personalized attention and innovative teaching methods, they helped him develop strong foundational skills. Ansh particularly excelled in numerical concepts and creative expression, demonstrating that financial limitations need not dictate a child's intellectual potential.</p>
 
-      <h2>Leading by Example</h2>
-      <p>Now 23, Priya has completed her education and returned to her village with a mission. Using the skills and confidence gained through ASC, she established a women's literacy program that has already taught basic reading and writing to over 100 women and girls. Her program combines practical literacy with discussions about rights, health, and economic independence.</p>
+      <h2>Character Development</h2>
+      <p>Beyond academics, LWA's holistic approach to education has fostered significant personal growth in Ansh. He has developed admirable character traits including respect for elders, kindness toward peers, and a strong sense of personal responsibility. These qualities have made him a well-rounded individual whose growth extends far beyond the classroom.</p>
 
-      <h2>Breaking Cycles</h2>
-      <p>Priya's work is gradually changing her community's perspective on women's roles. Fathers who once refused to let their daughters attend school now proudly point to Priya as an example of what educated girls can achieve. "Education gave me more than knowledge – it gave me courage," Priya explains. "Now I'm trying to pass that courage on to others who are still living in silence."</p>
+      <h2>A Promising Future</h2>
+      <p>Today, Ansh stands as a living testament to the transformative power of accessible education. His journey from a child with limited opportunities to an intellectually engaged and morally upright student inspires other children in similar circumstances. With continued support from LWA, Ansh's future holds boundless possibilities as he continues to grow and develop into a confident and capable individual.</p>
     `
   }
 ];

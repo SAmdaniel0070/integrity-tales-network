@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 const StoryCard = ({ story }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-video overflow-hidden">
         <img 
           src={story.imageUrl} 
           alt={story.title} 

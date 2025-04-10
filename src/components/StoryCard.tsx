@@ -23,7 +23,7 @@ const StoryCard = ({ story }: StoryCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full group transition-all duration-300 hover:shadow-lg">
       <div className="relative overflow-hidden">
-        <AspectRatio ratio={4/3}>
+        <AspectRatio ratio={16/9}>
           <img 
             src={story.imageUrl} 
             alt={story.title} 
