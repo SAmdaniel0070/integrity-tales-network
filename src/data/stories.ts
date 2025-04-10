@@ -26,28 +26,28 @@ export const educationStories: Story[] = [
     `
   },
   {
-    id: "ravi",
-    title: "Ravi Mehra: From School Dropout to College Graduate",
-    excerpt: "Abandoned his education due to financial struggles, Ravi found hope through ASC's outreach program. After joining, his natural aptitude for mathematics was nurtured, eventually earning him a full scholarship to engineering college.",
+    id: "payal",
+    title: "Payal Jadhav: Rising up from Adversity",
+    excerpt: "In a world where education is often considered a privilege, there are stories that shine a light on the transformative power of access to knowledge. Payal Jadhav, a seventh-grade student from a destitute background, has defied all odds and emerged as a beacon of hope.",
     category: "Education",
     location: "Sambhajinagar",
-    imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    slug: "ravi-mehra-story",
+    imageUrl: "/lovable-uploads/9e045006-a412-4929-b76b-016db134f4d3.png",
+    slug: "payal-jadhav-story",
     fullStory: `
-      <h2>Early Struggles</h2>
-      <p>At the age of 14, Ravi Mehra faced a heart-wrenching decision: continue his education or help support his family of five. With his father suffering from a chronic illness and unable to work consistently, Ravi chose to abandon his schooling after 8th grade. Though he excelled academically, particularly in mathematics, his family's dire financial situation left him with few alternatives. For two years, he worked odd jobs – from construction sites to local markets – earning barely enough to help his family survive.</p>
+      <h2>A Journey from Struggle to Triumph</h2>
+      <p>Payal's parents, unable to afford tuition fees, discovered the free education program offered by ASC. Determined to give their daughter a chance at a better future, they seized the opportunity and enrolled her in ASC. Little did they know that this decision would mark the beginning of an incredible journey of transformation for their beloved child.</p>
 
-      <h2>A Second Chance</h2>
-      <p>Ravi's life changed when ASC's community outreach team visited his village. Identifying his potential during a community survey, they offered him a place in their special education program for interrupted learners. Initially hesitant due to his responsibilities, ASC worked with his family to create a flexible schedule that allowed Ravi to continue contributing financially while resuming his studies.</p>
+      <h2>The Power of ASC's Free Education Program</h2>
+      <p>ASC's free education program not only provides academic support but also focuses on holistic development, emphasizing moral values and character building. Payal immersed herself in this nurturing environment, eagerly absorbing knowledge from her dedicated teachers and seeking inspiration from her fellow students.</p>
 
-      <h2>Discovering Potential</h2>
-      <p>Once enrolled, Ravi's natural aptitude for mathematics quickly became apparent. His teachers were astonished by his ability to solve complex problems with minimal formal training. The program provided him with specialized tutoring, and within a year, he had caught up with his peers. His mathematical talents flourished under the guidance of dedicated educators who recognized his exceptional abilities.</p>
+      <h2>From Student to Role Model</h2>
+      <p>Despite the challenges she faced, Payal's dedication and thirst for knowledge led her to excel academically. Her teachers recognized her potential and encouraged her to explore new concepts and ideas. Over time, Payal's innate talent blossomed, enabling her to rise above her circumstances and emerge as a role model for her peers.</p>
 
-      <h2>From Student to Scholar</h2>
-      <p>By age 18, Ravi had not only completed his secondary education but had scored among the top 1% in the state mathematics examination. This achievement earned him a full scholarship to a prestigious engineering college, where he continued to excel. Today, Ravi holds a degree in Computer Engineering and works for a leading technology company while financially supporting his family and funding his younger siblings' education.</p>
+      <h2>Transformed Morally and Mentally</h2>
+      <p>Education is not confined to textbooks alone; it shapes an individual's character and values. Through the guidance of her teachers and the nurturing environment at ASC, Payal experienced a remarkable transformation on a moral and mental level. She imbibed the virtues of empathy, resilience, and perseverance, becoming a beacon of goodness and hope in her community.</p>
 
-      <h2>Giving Back</h2>
-      <p>Ravi now volunteers with ASC during weekends, teaching mathematics to children from backgrounds similar to his own. "Education didn't just give me knowledge," he often tells his students, "it gave me the power to transform my family's destiny. That power exists within each of you too."</p>
+      <h2>A Radiant Tomorrow</h2>
+      <p>Despite hailing from a poor family, Payal's academic progress and personal growth have opened doors of opportunity for her. Her remarkable journey serves as an inspiration to other underprivileged students, showcasing the power of education to break the cycle of poverty and create a brighter future.</p>
     `
   },
   {
