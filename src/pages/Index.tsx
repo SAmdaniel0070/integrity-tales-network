@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -44,7 +43,7 @@ const Index = () => {
       {/* Success Stories Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Transforming Education in Rural Areas</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Transforming Lives</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Story 1 - Khushi's Story with the uploaded image */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -67,106 +66,43 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Story 2 */}
+            {/* Story 2 - Changed to Payal Jadhav */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Ravi Mehra" 
+                  src="/lovable-uploads/9e045006-a412-4929-b76b-016db134f4d3.png" 
+                  alt="Payal Jadhav" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
                 <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">Education</span>
-                <h3 className="text-xl font-bold mb-3">Ravi Mehra: From School Dropout to College Graduate</h3>
+                <h3 className="text-xl font-bold mb-3">Payal Jadhav: Rising up from Adversity</h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">
-                  Abandoned his education due to financial struggles, Ravi found hope through ASC's outreach program. After joining, his natural aptitude for mathematics was nurtured, eventually earning him a full scholarship to engineering college.
+                  In a world where education is often considered a privilege, there are stories that shine a light on the transformative power of access to knowledge. Payal Jadhav, a seventh-grade student from a destitute background, has defied all odds and emerged as a beacon of hope.
                 </p>
-                <Link to="/story/ravi-mehra-story" className="text-primary font-medium flex items-center hover:underline">
+                <Link to="/story/payal-jadhav-story" className="text-primary font-medium flex items-center hover:underline">
                   Read full story <ArrowRight size={16} className="ml-1" />
                 </Link>
               </div>
             </div>
             
-            {/* Story 3 */}
+            {/* Story 3 - Changed to Ansh Chabukswar */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1560251180-1a0b9a576d31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Priya Singh" 
+                  src="/lovable-uploads/3d6e7c7e-883b-4677-b3d1-ff2632a65584.png" 
+                  alt="Ansh Chabukswar" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">Leadership</span>
-                <h3 className="text-xl font-bold mb-3">Priya Singh: Finding Her Voice Through Education</h3>
+                <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">Education</span>
+                <h3 className="text-xl font-bold mb-3">Ansh Chabukswar: Journey of Inspiration</h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">
-                  Once shy and timid, Priya transformed through ASC's confidence-building workshops. Now leading a women's literacy program in her village, she's helping other girls discover the power of their voices.
+                  This report highlights the remarkable transformation of Ansh, a nursery student from a financially disadvantaged background, who overcame obstacles to receive a quality education through LWA program.
                 </p>
-                <Link to="/story/priya-singh-story" className="text-primary font-medium flex items-center hover:underline">
-                  Read full story <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Story 4 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Arjun Patel" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">Technology</span>
-                <h3 className="text-xl font-bold mb-3">Arjun Patel: Digital Dreams in a Rural Village</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  With no prior computer exposure, Arjun discovered a natural talent for coding through ASC's digital literacy program. Today, he's developing apps to solve local community challenges and inspiring a new generation of rural technologists.
-                </p>
-                <Link to="/story/arjun-patel-story" className="text-primary font-medium flex items-center hover:underline">
-                  Read full story <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Story 5 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Meena and Reena Sharma" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">Entrepreneurship</span>
-                <h3 className="text-xl font-bold mb-3">The Sharma Twins: Young Entrepreneurs Making a Difference</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  Twin sisters from a farming family used ASC's entrepreneurship program to launch an eco-friendly crafts business. Their venture now employs 15 village women and funds school supplies for local children.
-                </p>
-                <Link to="/story/sharma-twins-story" className="text-primary font-medium flex items-center hover:underline">
-                  Read full story <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Story 6 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Vijay Kumar" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">Arts</span>
-                <h3 className="text-xl font-bold mb-3">Vijay Kumar: Finding Healing Through Creative Expression</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  Overcoming trauma through ASC's arts program, Vijay discovered his talent for painting. His artwork now raises awareness about rural challenges while earning him national recognition and a scholarship to art school.
-                </p>
-                <Link to="/story/vijay-kumar-story" className="text-primary font-medium flex items-center hover:underline">
+                <Link to="/story/ansh-chabukswar-story" className="text-primary font-medium flex items-center hover:underline">
                   Read full story <ArrowRight size={16} className="ml-1" />
                 </Link>
               </div>
