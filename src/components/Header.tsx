@@ -16,7 +16,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/home" className="flex items-center">
             <span className="text-2xl font-bold text-primary">Integrity Foundation</span>
           </Link>
 

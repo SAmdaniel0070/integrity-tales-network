@@ -101,7 +101,7 @@ const StoryDetail = () => {
               <img 
                 src={story.imageUrl} 
                 alt={story.title} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </AspectRatio>
             <div className="bg-gray-50 p-2 text-sm text-center text-gray-600">
