@@ -12,6 +12,8 @@ import StoryDetail from "./pages/StoryDetail";
 import Impact from "./pages/Impact";
 import Education from "./pages/Education";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./ScrollToTop";
+
 
 
 const queryClient = new QueryClient();
@@ -21,7 +23,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/integrity-tales-network">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Index />} />

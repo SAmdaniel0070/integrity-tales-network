@@ -9,7 +9,7 @@ export const educationStories: Story[] = [
     excerpt: "In a world where financial constraints often hinder dreams and aspirations, Khushi Sable, a determined 7th-grade student, embodies the indomitable spirit of perseverance through ASC's free education program.",
     category: "Education",
     location: "Jalna",
-    imageUrl: "/lovable-uploads/7dd03504-9233-4f7a-aa5c-f45e2a52e716.png",
+    imageUrl: "https://preview--integrity-tales-network.lovable.app/lovable-uploads/7dd03504-9233-4f7a-aa5c-f45e2a52e716.png",
     slug: "khushi-sable-story",
     fullStory: `
       <h2>A Difficult Beginning</h2>
@@ -31,7 +31,7 @@ export const educationStories: Story[] = [
     excerpt: "In a world where education is often considered a privilege, there are stories that shine a light on the transformative power of access to knowledge. Payal Jadhav, a seventh-grade student from a destitute background, has defied all odds and emerged as a beacon of hope.",
     category: "Education",
     location: "Sambhajinagar",
-    imageUrl: "/lovable-uploads/9e045006-a412-4929-b76b-016db134f4d3.png",
+    imageUrl: "https://preview--integrity-tales-network.lovable.app/lovable-uploads/9e045006-a412-4929-b76b-016db134f4d3.png",
     slug: "payal-jadhav-story",
     fullStory: `
       <h2>A Journey from Struggle to Triumph</h2>
@@ -56,7 +56,7 @@ export const educationStories: Story[] = [
     excerpt: "This report highlights the remarkable transformation of Ansh, a nursery student from a financially disadvantaged background, who overcame obstacles to receive a quality education through LWA program.",
     category: "Education",
     location: "Amravati",
-    imageUrl: "/lovable-uploads/3d6e7c7e-883b-4677-b3d1-ff2632a65584.png",
+    imageUrl: "https://preview--integrity-tales-network.lovable.app/lovable-uploads/3d6e7c7e-883b-4677-b3d1-ff2632a65584.png",
     slug: "ansh-chabukswar-story",
     fullStory: `
       <h2>Humble Beginnings</h2>

@@ -3,7 +3,6 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -38,11 +37,7 @@ const About = () => {
               </p>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Team collaboration" 
-                className="rounded-lg shadow-lg"
-              />
+              
               <div className="absolute -bottom-6 -left-6 bg-tertiary p-6 rounded-lg shadow-lg">
                 <p className="font-bold text-2xl">1,000+</p>
                 <p className="text-black/80">Communities Impacted</p>

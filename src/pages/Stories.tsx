@@ -11,6 +11,9 @@ const Stories = () => {
   const { category } = useParams<{ category?: string }>();
   const [activeCategory, setActiveCategory] = useState(category || 'all');
   const [searchQuery, setSearchQuery] = useState('');
+
+  console.log("allStories",allStories);
+  
   
   // Filter stories by category and search query
   const filteredStories = activeCategory === 'all' 
@@ -58,40 +61,16 @@ const Stories = () => {
                 Education
               </Button>
               <Button 
-                variant={activeCategory === 'healthcare' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('healthcare')}
+                variant={activeCategory === 'empowerment' ? 'default' : 'outline'}
+                onClick={() => setActiveCategory('empowerment')}
               >
-                Healthcare
+                Empowerment
               </Button>
               <Button 
-                variant={activeCategory === 'community' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('community')}
+                variant={activeCategory === 'incomeGeneration' ? 'default' : 'outline'}
+                onClick={() => setActiveCategory('incomeGeneration')}
               >
-                Community
-              </Button>
-              <Button 
-                variant={activeCategory === 'leadership' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('leadership')}
-              >
-                Leadership
-              </Button>
-              <Button 
-                variant={activeCategory === 'technology' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('technology')}
-              >
-                Technology
-              </Button>
-              <Button 
-                variant={activeCategory === 'entrepreneurship' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('entrepreneurship')}
-              >
-                Entrepreneurship
-              </Button>
-              <Button 
-                variant={activeCategory === 'arts' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('arts')}
-              >
-                Arts
+                Income Generation
               </Button>
             </div>
             

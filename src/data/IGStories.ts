@@ -1,12 +1,12 @@
 
 import { Story } from "../components/StoryCard";
 
-export const entrepreneurshipStories: Story[] = [
+export const IGStories: Story[] = [
   {
     id: "sharma-twins",
     title: "The Sharma Twins: Young Entrepreneurs Making a Difference",
     excerpt: "Twin sisters from a farming family used ASC's entrepreneurship program to launch an eco-friendly crafts business. Their venture now employs 15 village women and funds school supplies for local children.",
-    category: "Entrepreneurship",
+    category: "Income Generation",
     location: "Ahilyanagar",
     imageUrl: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     slug: "sharma-twins-story",
