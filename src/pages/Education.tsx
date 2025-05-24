@@ -1,16 +1,33 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StoryCard from '@/components/StoryCard';
-import { getStoriesByCategory } from '@/data/stories';
+import { getStoriesByCategory } from '@/lib/firestore';
+import type { Story } from '@/types/schema';
 import { BookOpen, User, Building } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Education = () => {
-  const educationStories = getStoriesByCategory('education');
-  
+  const [educationStories, setEducationStories] = useState<Story[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchStories = async () => {
+      try {
+        setLoading(true);
+        const stories = await getStoriesByCategory('education');
+        setEducationStories(stories);
+      } catch (error) {
+        console.error('Error fetching education stories:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStories();
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -133,7 +150,7 @@ const Education = () => {
           </div>
         </section>
 
-        {/* Success Stories Section - Updated to show all education stories */}
+        {/* Success Stories Section */}
         <section className="py-16 bg-gray-50">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
@@ -144,20 +161,26 @@ const Education = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-              {educationStories.length > 0 ? (
-                educationStories.map((story) => (
-                  <StoryCard key={story.id} story={story} />
-                ))
-              ) : (
-                <div className="col-span-3 text-center py-12">
-                  <p className="text-gray-600">No education stories available at the moment.</p>
-                </div>
-              )}
-            </div>
+            {loading ? (
+              <div className="flex justify-center py-12">
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                {educationStories.length > 0 ? (
+                  educationStories.map((story) => (
+                    <StoryCard key={story.id} story={story} />
+                  ))
+                ) : (
+                  <div className="col-span-3 text-center py-12">
+                    <p className="text-gray-600">No education stories available at the moment.</p>
+                  </div>
+                )}
+              </div>
+            )}
             
             <div className="text-center mt-12">
-              <Link to="/stories/education">
+              <Link to="/stories">
                 <Button variant="outline" size="lg">View All Education Stories</Button>
               </Link>
             </div>

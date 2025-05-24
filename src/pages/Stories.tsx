@@ -1,33 +1,48 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StoryCard from '@/components/StoryCard';
-import { allStories } from '@/data/stories';
+import { getStoriesByCategory, getCategories } from '@/lib/firestore';
+import type { Story } from '@/types/schema';
 import { Button } from '@/components/ui/button';
 
 const Stories = () => {
   const { category } = useParams<{ category?: string }>();
   const [activeCategory, setActiveCategory] = useState(category || 'all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [stories, setStories] = useState<Story[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  console.log("allStories",allStories);
-  
-  
-  // Filter stories by category and search query
-  const filteredStories = activeCategory === 'all' 
-    ? allStories.filter(story =>
-        story.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        story.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        story.location.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : allStories.filter(story => 
-        story.category.toLowerCase() === activeCategory.toLowerCase() &&
-        (story.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        story.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        story.location.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
+  useEffect(() => {
+    const fetchStories = async () => {
+      try {
+        setLoading(true);
+        const fetchedStories = await getStoriesByCategory(activeCategory as any);
+        setStories(fetchedStories);
+      } catch (error) {
+        console.error('Error fetching stories:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStories();
+  }, [activeCategory]);
+
+  const filteredStories = stories.filter(story =>
+    story.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    story.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    story.location.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -67,8 +82,8 @@ const Stories = () => {
                 Empowerment
               </Button>
               <Button 
-                variant={activeCategory === 'incomeGeneration' ? 'default' : 'outline'}
-                onClick={() => setActiveCategory('incomeGeneration')}
+                variant={activeCategory === 'income generation' ? 'default' : 'outline'}
+                onClick={() => setActiveCategory('income generation')}
               >
                 Income Generation
               </Button>

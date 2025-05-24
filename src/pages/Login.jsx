@@ -91,22 +91,25 @@ export default function LoginPage() {
       // Simulate API call with a timeout
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // For demo purposes - simulating authentication
-      // In a real app, you would verify with your auth service
-      const isAuthenticated = email === 'kulkarniajay@hotmail.com' && password === 'password123';
+      // Check for admin credentials
+      const isAdmin = email === 'admin@example.com' && password === 'admin123';
+      const isRegularUser = email === 'kulkarniajay@hotmail.com' && password === 'password123';
       
-      if (isAuthenticated) {
+      if (isAdmin) {
+        console.log('Admin login successful');
+        setLoginAttempts(0);
+        navigate('/admin'); // Navigate to admin panel
+      } else if (isRegularUser) {
         console.log('Login successful');
-        setLoginAttempts(0); // Reset attempt counter on success
-        alert('Login successful! Redirecting to dashboard...');
-        navigate('/home'); // Navigate to /home
+        setLoginAttempts(0);
+        navigate('/home'); // Navigate to home for regular users
       } else {
         const newAttempts = loginAttempts + 1;
         setLoginAttempts(newAttempts);
       
         if (newAttempts >= 5) {
           setIsLocked(true);
-          setLockTimer(30); // 30 seconds lockout
+          setLockTimer(30);
           setIsError(true);
           setErrorMessage('Too many failed attempts. Account locked for 30 seconds.');
         } else {

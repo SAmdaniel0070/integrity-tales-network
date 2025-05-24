@@ -1,0 +1,44 @@
+{
+  "stories": {
+    "__collection__": {
+      "story_id_1": {
+        "id": "story_id_1",
+        "title": "The Power of Education in Rural Areas",
+        "excerpt": "How education is transforming lives in rural communities",
+        "category": "education",
+        "location": "Rural Maharashtra, India",
+        "imageUrl": "https://example.com/images/education-story-1.jpg",
+        "slug": "power-of-education-rural-areas",
+        "fullStory": "Complete story content here..."
+      }
+    }
+  },
+  "storyCollections": {
+    "__collection__": {
+      "education": {
+        "stories": ["story_id_1", "story_id_2"]
+      },
+      "general": {
+        "stories": ["story_id_3", "story_id_4"]
+      },
+      "empowerment": {
+        "stories": ["story_id_5", "story_id_6"]
+      },
+      "technology": {
+        "stories": ["story_id_7", "story_id_8"]
+      },
+      "arts": {
+        "stories": ["story_id_9", "story_id_10"]
+      }
+    }
+  },
+  "categories": {
+    "available": [
+      "education",
+      "general",
+      "empowerment",
+      "technology",
+      "arts"
+    ]
+  }
+} 

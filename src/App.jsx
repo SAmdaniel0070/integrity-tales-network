@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,10 +12,11 @@ import Impact from "./pages/Impact";
 import Education from "./pages/Education";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./ScrollToTop";
-
-
+import AdminDashboard from './pages/admin/Dashboard';
 
 const queryClient = new QueryClient();
+
+// Create a protected route wrapper
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/story/:slug" element={<StoryDetail />} />
           <Route path="/impact" element={<Impact />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/admin" element={<AdminDashboard />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
