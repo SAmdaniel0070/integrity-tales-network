@@ -1,59 +1,80 @@
 {
-  "hash": "56689dc6",
-  "configHash": "f7e42a23",
-  "lockfileHash": "7c10619f",
-  "browserHash": "b02f3ee2",
+  "hash": "a3ba1944",
+  "configHash": "bab5aad2",
+  "lockfileHash": "6e36bcc8",
+  "browserHash": "363cc1b9",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "77040085",
+      "fileHash": "93116869",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "36d902d9",
+      "fileHash": "0ba960fe",
       "needsInterop": true
     },
     "@tanstack/react-query": {
       "src": "../../node_modules/@tanstack/react-query/build/modern/index.js",
       "file": "@tanstack_react-query.js",
-      "fileHash": "32d6250e",
+      "fileHash": "6dd2a789",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "5fd90471",
+      "fileHash": "a9b22c02",
       "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "6dd8e7d6",
+      "fileHash": "4894f3fc",
       "needsInterop": true
     },
     "lucide-react": {
       "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
       "file": "lucide-react.js",
-      "fileHash": "b971ae4f",
-      "needsInterop": false
-    },
-    "recharts": {
-      "src": "../../node_modules/recharts/es6/index.js",
-      "file": "recharts.js",
-      "fileHash": "89ffd85c",
+      "fileHash": "3e4b2f88",
       "needsInterop": false
     },
     "firebase/firestore": {
       "src": "../../node_modules/firebase/firestore/dist/esm/index.esm.js",
       "file": "firebase_firestore.js",
-      "fileHash": "b9ec724e",
+      "fileHash": "0cb7b91d",
+      "needsInterop": false
+    },
+    "recharts": {
+      "src": "../../node_modules/recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "3b860517",
+      "needsInterop": false
+    },
+    "firebase/app": {
+      "src": "../../node_modules/firebase/app/dist/esm/index.esm.js",
+      "file": "firebase_app.js",
+      "fileHash": "20a7f596",
+      "needsInterop": false
+    },
+    "firebase/auth": {
+      "src": "../../node_modules/firebase/auth/dist/esm/index.esm.js",
+      "file": "firebase_auth.js",
+      "fileHash": "ae8c90fe",
+      "needsInterop": false
+    },
+    "sonner": {
+      "src": "../../node_modules/sonner/dist/index.mjs",
+      "file": "sonner.js",
+      "fileHash": "e97d1d1f",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-RPXKQGME": {
+      "file": "chunk-RPXKQGME.js"
+    },
     "chunk-I2MCD6RR": {
       "file": "chunk-I2MCD6RR.js"
     },
